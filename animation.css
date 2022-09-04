@@ -1,0 +1,201 @@
+*{
+    box-sizing:border-box;
+}
+.edges{
+    margin-left:auto;
+    margin-right:auto;
+}
+body{
+    background-color:gray;
+    
+}
+.head::before{
+    content:"";
+    z-index:-1;
+    background-color:black;
+    width:50%;
+    height:10px;
+    position:absolute;
+    top:-10px;
+    left:50%;
+    transform:translatex(-50%);
+    border-radius:70% ;
+}
+.head{
+    background-color:yellow;
+    width:10rem;
+    height:10rem;
+    border-radius:50%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:31px;
+    animation-name:head;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    position:relative;
+    
+}
+
+
+.eyes{
+    width:100%;
+    height:30px;
+    display:flex;
+    justify-content:space-between;
+    padding-left:3px ;
+    padding-right:3px;
+}
+.eyes div{
+    width:30px ;
+    height:30px;
+    background-color:blue;
+    border-radius:50%;
+    animation-name:eyes;
+    animation-duration:1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction:alternate;
+    animation-fill-mode: both;
+}
+.head .mouse{
+    height:40px;
+    background-color:green;
+    margin-top:37px;
+    border-radius:0px 0px 50px 50px;
+}
+.core{
+    width:13rem;
+}
+.line{
+    width:33px;
+    height:130px;
+    background-color:yellow;
+    position:relative;
+    margin-top:-19px;
+    border-radius:20px 20px 0px 0px;
+    animation-name:line;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction:alternate;
+    animation-fill-mode: both;
+
+}
+.stumack{
+    width:13rem;
+    height:13rem;
+    position:relative;
+    background-color:yellow;
+    border-radius:50%;
+    margin-top:-17px;
+    animation-name:stumack;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    z-index:5;
+}
+.legs{
+    width:7rem;
+    display:flex;
+    justify-content:space-between;
+    margin-top:-19px;
+}
+.legs .one{
+    height:21rem;
+    width:2rem;
+    background-color:yellow;
+    margin-top:-7px;
+    POSITION:RELATIVE;
+    animation-name:leg1;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+  
+}
+.legs .one::before{
+    content:"";
+    position:absolute;
+width: 3rem;height:3rem;
+background-color:green;bottom:0;
+left:-3rem;
+
+}
+.legs .two{
+    height:21rem;
+    width:2rem;
+    background-color:yellow;
+    margin-top:-7px;
+    POSITION:RELATIVE;
+    animation-name:leg2;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction: alternate;    
+    animation-fill-mode: both;
+
+}
+.legs .two::before{
+    content:"";
+    position:absolute;
+width: 3rem;height:3rem;
+background-color:green;bottom:0;
+right:-3rem;
+}
+@keyframes line{
+   0%{
+     transform:rotate(16deg) translatex(-9px);
+   }
+   100%{
+    transform:rotate(-16deg) translatex(9px);   
+   }
+}
+@keyframes stumack{
+    0%{
+        margin-left:-27px;         
+    }
+    100%{
+        margin-left:27px;
+    }
+ }
+    
+    
+ @keyframes leg1{
+    0%{
+        transform:rotate(-9deg);
+    }
+   
+    100%{
+        
+        transform:rotate(9deg); 
+    }
+ }
+ @keyframes leg2{
+    0%{
+        transform:rotate(-9deg);
+    }
+    
+    100%{
+        transform:rotate(9deg);
+    
+    }
+ }
+@keyframes eyes{
+    to{
+        background-color:black;
+    }
+}
+@keyframes head{
+    from{
+     transform:translatex(-5px) rotate(-5deg); 
+    }
+    to{
+        transform:translatex(5px) rotate(5deg); 
+    }
+}
